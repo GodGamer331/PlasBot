@@ -44,9 +44,13 @@ bot.on("message", async message => {
   if (message.content === "p!server info"){
     var embed = new Discord.RichEmbed()
     .setAuthor(`${message.guild.name}'s info`)
-    //Something here :joy:
+    .setDescription("Supporr Server")
     .addField("Members", `${message.guild.members.filter(member => member.user.bot).size} Bots of ${message.guild.memberCount} members!`)
-    .addField("Channels", `${message.guild.channels.filter(chan => chan.type === "voice").size} Voice / Text ${message.guild.channels.filter(chan => chan.type === "text").size}`);
+    .addField("Channels", `${message.guild.channels.filter(chan => chan.type === "voice").size} Voice / Text ${message.guild.channels.filter(chan => chan.type === "text").size}`)
+    .addField("Server Owner", `${message.guild.owner.user}`)
+    .addField("Owner ID", `${message.guild.owner.id}`)
+    .setColor("#eac509");
+
     message.channel.send(embed)
   }
 });
