@@ -24,10 +24,11 @@ bot.on("message", async message => {
     .setTitle("Uh Oh?")
     .addField("Ping!", ":ping_pong: Pong!")
     .setTimestamp()
+    .setColor("GREEN")
     .setFooter(message.author.username);
     message.channel.send(embed)
   }
-  
+  //if (cmd === `${prefix}help`){
 });
 
 bot.login(process.env.token);
