@@ -22,6 +22,7 @@ bot.on("message", async message => {
   if (cmd === `{prefix}ping`){
     var embed = new Discord.RichEmbed()
     .setTitle("Uh Oh?")
+    .setUrl(`https://discord.gg/9rTcHkA`)
     .addField("Ping!", ":ping_pong: Pong!")
     .setTimestamp()
     .setColor("GREEN")
