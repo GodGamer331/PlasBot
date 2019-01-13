@@ -44,7 +44,7 @@ bot.on("message", async message => {
   if (message.content === "p!server info"){
     var embed = new Discord.RichEmbed()
     .setAuthor(`${message.guild.name}'s info`)
-    .setThumbnail(message.guild.iconURL())
+    //Something here :joy:
     .addField("Members", `${message.guild.members.filter(member => member.user.bot).size} Bots of ${message.guild.memberCount} members!`)
     .addField("Channels", `${message.guild.channels.filter(chan => chan.type === "voice").size} Voice / Text ${message.guild.channels.filter(chan => chan.type === "text").size}`);
     message.channel.send(embed)
