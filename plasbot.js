@@ -37,6 +37,7 @@ bot.on("message", async message => {
     .addField("With Prefix:", "[here are all commands with prefix]")
     .addField("p!help", "Shows this command")
     .setColor("BLUE")
+    .setAuthor("🔗 Invite me by clicking [here](https://discordapp.com/api/oauth2/authorize?client_id=533808357748768778&permissions=8&scope=bot) 🔗")
     .setFooter("Message sent it:")
     .setTimestamp();
     message.channel.send(embed)
