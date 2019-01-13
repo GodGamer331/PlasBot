@@ -22,19 +22,25 @@ bot.on("message", async message => {
   if (message.content === "Ping"){
     var embed = new Discord.RichEmbed()
     .setTitle("Uh Oh?")
-    .setDescription("[lol1](https://cdn.discordapp.com/attachments/519581022124507189/533835650407858186/Doge_PREMIUM.png) \n [Lol2](https://cdn.discordapp.com/attachments/519581022124507189/533835650407858188/unknown-4.png) \n [Lol3](https://cdn.discordapp.com/attachments/519581022124507189/533835650932408332/Screenshot_2019-01-06-11-25-49-1.png)")
-                    
-                    
-    
-   
-    
+    .setDescription("Support Server, Preparing")
     .addField("Ping!", ":ping_pong: Pong!")
     .setTimestamp()
     .setColor("GREEN")
     .setFooter(message.author.username);
     message.channel.send(embed)
   }
-  //if (cmd === `${prefix}help`){
+  if (cmd === `${prefix}help`){
+    var embed = new Discord.RichEmbed()
+    .setTitle("Help commands!", `${message.author.avatarURL}`)
+    .addField("Without Prefix:", " ")
+    .addField("Ping")
+    .addField("With Prefix:", " ")
+    .addField("p!help", "Shows this command")
+    .setColor("BLUE")
+    .setFooter("Message sent it:")
+    .setTimestamp();
+    message.channel.send(embed)
+  }
 });
 
 bot.login(process.env.token);
