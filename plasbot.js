@@ -75,9 +75,6 @@ bot.on("message", async message => {
     message.channel.send(embed)
   }
   
-  let messageArray = message.content.split(" ")
-  let cmd = messageArray[0]
-  let args = messageArray.slice(1)
   if (!mods) return message.reply("You dont have Moderator role.")
   if (!args[0]) return message.channel.send("Please specify a number!");
   
