@@ -75,14 +75,14 @@ bot.on("message", async message => {
     message.channel.send(embed)
   }
   
-  if (!mods) return message.reply("You dont have Moderator role.")
+  if (!mods) return message.reply("You dont have Moderator role.");
   if (!args[0]) return message.channel.send("Please specify a number!");
   
   if (message.content === "p!clear"){
     message.channel.bulkDelete(args[0]).then(() => {
       
       message.channel.send(`Cleared ${args[0]} messages!`).then(message => message.delete(500));
-    });
+    })
   }
                                  
 });
