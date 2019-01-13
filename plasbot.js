@@ -19,10 +19,15 @@ bot.on("message", async message => {
   let args = messageArray.slice(1)
   let mods = message.guild.roles.find("name", "#~Moderator~#");
   
-  if (cmd === `{prefix}ping`){
+  if (message.content === "Ping"){
     var embed = new Discord.RichEmbed()
     .setTitle("Uh Oh?")
-    .setUrl(`https://discord.gg/9rTcHkA`)
+    .setDescription("lol1 \n Lol2 \n Lol3")
+                    
+                    
+    
+   
+    
     .addField("Ping!", ":ping_pong: Pong!")
     .setTimestamp()
     .setColor("GREEN")
