@@ -4,7 +4,7 @@ const fs = require("fs");
 const prefix = "!";
 
 bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online with prefix P>!`);
+  console.log(`${bot.user.username} is online with prefix !`);
   
   bot.user.setActivity("!help for start", {type: "WATCHING"});
 });
@@ -13,9 +13,15 @@ bot.on("message", async message => {
 
   if (message.author.bot) return;
   
+  let prefix = "!"
+  let messageArray = message.content.split(" ")
+  let cmd = messageArray[0]
+  let args = messageArray.slice(1)
+  let mods = message.guild.roles.find("name", "#~Moderator~#");
+  
   if (cmd === `{prefix}ping`){
     var embed = new Discord.RichEmbed()
-    .setTitle("Oh?")
+    .setTitle("Uh Oh?")
     .addField("Ping!", ":ping_pong: Pong!")
     .setTimestamp()
     .setFooter(message.author.username);
