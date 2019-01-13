@@ -55,6 +55,9 @@ bot.on("message", async message => {
     message.channel.send(embed)
   }
   if (message.content === "p!userinfo"){
+    let messageArray = message.content.split(" ")
+    let cmd = messageArray[0]
+    let args = messageArray.slice(1)
     let member = message.mentions.users.first();
     var embed = new Discord.RichEmbed()
     
