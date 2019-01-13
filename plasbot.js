@@ -13,7 +13,7 @@ bot.on("message", async message => {
 
   if (message.author.bot) return;
   
-  let prefix = "!"
+  let prefix = "p!"
   let messageArray = message.content.split(" ")
   let cmd = messageArray[0]
   let args = messageArray.slice(1)
@@ -22,7 +22,7 @@ bot.on("message", async message => {
   if (message.content === "Ping"){
     var embed = new Discord.RichEmbed()
     .setTitle("Uh Oh?")
-    .setDescription("Support Server, Preparing")
+    .setAuthor("Support Server, Preparing", "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png")
     .addField("Ping!", ":ping_pong: Pong!")
     .setTimestamp()
     .setColor("GREEN")
@@ -32,9 +32,9 @@ bot.on("message", async message => {
   if (cmd === `${prefix}help`){
     var embed = new Discord.RichEmbed()
     .setTitle("Help commands!", `${message.author.avatarURL}`)
-    .addField("Without Prefix:", " ")
-    .addField("Ping")
-    .addField("With Prefix:", " ")
+    .addField("Without Prefix:", "[here are all commands without prefix]")
+    .addField("Ping", "Shows bots Ping and our server invite.")
+    .addField("With Prefix:", "[here are all commands with prefix]")
     .addField("p!help", "Shows this command")
     .setColor("BLUE")
     .setFooter("Message sent it:")
