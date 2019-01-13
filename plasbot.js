@@ -22,7 +22,7 @@ bot.on("message", async message => {
   if (message.content === "Ping"){
     var embed = new Discord.RichEmbed()
     .setTitle("Uh Oh?")
-    .setDescription("lol1 \n Lol2 \n Lol3")
+    .setDescription("[lol1](https://cdn.discordapp.com/attachments/519581022124507189/533835650407858186/Doge_PREMIUM.png) \n [Lol2](https://cdn.discordapp.com/attachments/519581022124507189/533835650407858188/unknown-4.png) \n [Lol3](https://cdn.discordapp.com/attachments/519581022124507189/533835650932408332/Screenshot_2019-01-06-11-25-49-1.png)")
                     
                     
     
