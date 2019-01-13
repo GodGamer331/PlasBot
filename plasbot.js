@@ -4,9 +4,9 @@ const fs = require("fs");
 const prefix = "!";
 
 bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online with prefix !`);
+  console.log(`${bot.user.username} is online with prefix p!`);
   
-  bot.user.setActivity("!help for start", {type: "WATCHING"});
+  bot.user.setActivity("p!help for start", {type: "STREAMING"});
 });
 
 bot.on("message", async message => {
@@ -39,6 +39,14 @@ bot.on("message", async message => {
     .setColor("BLUE")
     .setFooter("Message sent it:")
     .setTimestamp();
+    message.channel.send(embed)
+  }
+  if (message.content === "p!server info"){
+    var embed = new Discord.RichEmbed()
+    .setAuthor(`${message.guild.name}'s info`)
+    .setThumbnail(message.guild.iconURL())
+    .addField("Members", `${message.guild.members.filter(member => member.user.bot).size} Bots of ${message.guild.memberCount} members!`)
+    .addField("Channels", `${message.guild.channels.filter(chan => chan.type === "voice").size} Voice / Text ${message.guild.channels.filter(chan => chan.type === "text").size}`);
     message.channel.send(embed)
   }
 });
