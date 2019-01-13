@@ -81,8 +81,8 @@ bot.on("message", async message => {
   if (message.content === "p!clear"){
     message.channel.bulkDelete(args[0]).then(() => {
       message.channel.send(`Cleared ${args[0]} messages!`).then(message => message.delete(500));
-    })
-  }
+    }
+  })
                                  
 });
 
