@@ -29,7 +29,7 @@ bot.on("message", async message => {
     .setFooter(message.author.username);
     message.channel.send(embed)
   }
-  if (message.content === "p!help").toLoverCase(){
+  if (message.content === "p!help".toLowerCase()){
     var embed = new Discord.RichEmbed()
     .setTitle("Help commands!", `${message.author.avatarURL}`)
     .addField("Without Prefix:", "[here are all commands without prefix]")
